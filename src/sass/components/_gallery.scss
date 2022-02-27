@@ -1,12 +1,12 @@
 .gallery-section {
   @media screen and (min-width: 320px) {
-    background: linear-gradient(180deg, #fff5f6 92%, transparent 50%);
+    background: linear-gradient(180deg, #fff5f6 93%, transparent 50%);
   }
   @media screen and (min-width: 768px) {
     background: linear-gradient(180deg, #fff5f6 76%, transparent 50%);
   }
   @media screen and (min-width: 1280px) {
-    background: linear-gradient(180deg, #fff5f6 75%, transparent 50%);
+    background: linear-gradient(180deg, #fff5f6 70%, transparent 50%);
   }
 }
 
@@ -114,16 +114,71 @@
   }
 }
 
-.gallery-banner {
-  margin-right: auto;
-  margin-left: auto;
-  @media screen and (min-width: 320px) {
-    margin-bottom: 80px;
+// .gallery-banner {
+//   margin-right: auto;
+//   margin-left: auto;
+//   @media screen and (min-width: 320px) {
+//     margin-bottom: 80px;
+//   }
+//   @media screen and (min-width: 768px) {
+//     margin-bottom: 120px;
+//   }
+//   @media screen and (min-width: 1280px) {
+//     margin-bottom: 145px;
+//   }
+// }
+
+// -------------------------------------------my-code-----------------------------------------------------------
+.gallery__container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (min-width: 320px) {
+min-width: 85%;
+margin-bottom: 80px;
   }
-  @media screen and (min-width: 768px) {
-    margin-bottom: 120px;
+   @media screen and (min-width: 480px) {
+width: 400px;
+margin-bottom: 80px;
   }
-  @media screen and (min-width: 1280px) {
-    margin-bottom: 125px;
+    @media screen and (min-width: 768px) {
+width: 630px;
+margin-bottom: 121px;
   }
+     @media screen and (min-width: 1280px) {
+width: 1020px;
+margin-bottom: 132px;
+  }
+ }
+
+.dog-cofee{
+margin-bottom: 10%;
+}
+
+.gallery__container-container-2{
+    display: flex;
+    flex-direction: column;
+
+}
+.gallery-banner-1{
+    border-radius: 20%;
+     transition: transform  250ms linear;
+     margin-left: 2px;
+    margin-bottom: 2px;
+    @media screen and (min-width: 768px) {
+        
+  margin-left: 5px;
+    margin-bottom: 5px;
+  }
+    // width: 140px;
+    // height: 140px;
+  
+    
+}
+.gallery-banner-1:hover {
+    box-shadow: 5px 5px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+transform: scale(1.5);
 }
