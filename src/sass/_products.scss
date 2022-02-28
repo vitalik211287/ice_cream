@@ -15,9 +15,9 @@
     width: 100%;
     max-width: 768px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1280px;
   }
 
   margin-left: auto;
@@ -69,12 +69,18 @@
   @include tab {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+   
     margin-left: -20px;
     margin-top: -20px;
+    width: 768px;
   }
   @include desk {
     margin-left: -30px;
     margin-top: -30px;
+    width: 1080px;
+     margin-left: auto;
+    margin-right: auto;
   }
   text-align: center;
 }
@@ -411,7 +417,7 @@
     width: 350px;
     height: 350px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     min-width: 450px;
     min-height: 450px;
   }
@@ -472,7 +478,7 @@
     width: 350px;
     height: 350px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     min-width: 450px;
     min-height: 450px;
   }
@@ -533,7 +539,7 @@
     width: 350px;
     height: 350px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     min-width: 450px;
     min-height: 450px;
   }
@@ -570,7 +576,7 @@
   @media screen and (min-width: 768px) {
     padding: 15px 5px 30px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     font-size: 31px;
     padding: 15px 20px 30px;
   }
@@ -582,7 +588,7 @@
   font-size: 14px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     font-size: 20px;
     padding: 30px;
   }
