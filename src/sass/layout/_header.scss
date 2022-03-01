@@ -52,6 +52,7 @@ a {
   .header-navbar,
   .header-navbar__boxes {
     display: flex;
+    z-index: 10;
   }
   .header-navbar__item:not(:last-child) {
     margin-right: 35px;
