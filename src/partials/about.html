@@ -1,9 +1,9 @@
 <section class="section__about" id="About">
   <div class="container__about">
     <div class="about__name">
-      <label class="about__label wow animated animate__bounce" data-wow-duration="1.4s" data-wow-offset="10">tradition
+      <label class="about__label " data-aos="fade-right" >tradition
         and love</label>
-      <h2 class="about__title wow animated animate__bounce" data-wow-duration="1.4s" data-wow-offset="10" id="How">
+      <h2 class="about__title" data-aos="fade-left" id="How">
         how it’s made?
       </h2>
     </div>
@@ -62,17 +62,10 @@
       </div>
     </div>
   </div>
-  <script src="./js/wow.min.js"></script>
-  <script>
-    wow = new WOW({
-      boxClass: 'wow',
-      animateClass: 'animated',
-      offset: 0,
-      mobile: true,
-      live: true,
-    });
-    wow.init();
-  </script>
+<script src="js/wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script> 
   <script src="./js/about-modal.js"></script>
   <script>
     (() => {

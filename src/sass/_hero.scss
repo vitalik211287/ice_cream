@@ -189,6 +189,7 @@
     right: -8px;
     bottom: 60px;
   }
+
 }
 
 .hero__figures {
@@ -204,8 +205,20 @@
     height: 165px;
     bottom: 341px;
   }
+
 }
+@keyframes rotate{
+  from{
+    transform:rotate(0)
+  }
+  to{
+    transform:rotate(360deg)
+  }
+}
+
 .hero__figures-text {
+   animation-name: rotate;
+   animation-duration: 3000ms;
   font-family: DM Sans;
   font-style: normal;
   font-weight: normal;
@@ -572,6 +585,9 @@ margin-bottom: 30px;
     border: none;
     padding: 0;
     position: absolute;
+    @media screen and (max-width: 767px) {
+    display: none;
+  }
     @media screen and (min-width: 768px) {
   top: 55px;
    left: 0px;
