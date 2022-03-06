@@ -6,7 +6,7 @@
   "homepage": "https://vitalik211287.github.io/Out-of-time-",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src.html--public-url /Out-of-time-"
+    "build": "parcel build src/*.html--public-url /Out-of-time-"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
+    "github-pages-deploy-action": "^3.5.1",
     "swiper": "^8.0.6",
     "wow.js": "^1.2.2"
   }
