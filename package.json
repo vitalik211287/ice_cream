@@ -6,7 +6,8 @@
   "homepage": "https://vitalik211287.github.io/Out-of-time-",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /Out-of-time-/"},
+    "build": "parcel build src/*.html --public-url /Out-of-time-/"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/goitacademy/parcel-project-template.git"
