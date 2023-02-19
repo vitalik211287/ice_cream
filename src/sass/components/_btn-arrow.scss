@@ -1,0 +1,23 @@
+.btn-arrow {
+  @include flex(flex, center, center);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  background-color: #ffffff;
+  color: var(--primaryBrandColor);
+  cursor: pointer;
+  transition: background-color 250ms var(--timingFunction), color 250ms var(--timingFunction),
+    transform 250ms var(--timingFunction);
+
+  &:hover,
+  &:focus {
+    background-color: var(--primaryBrandColor);
+    color: #ffffff;
+    transform: scale(1.1) rotate(360deg);
+  }
+}
+
+.btn-arrow__icon {
+  fill: currentColor;
+}

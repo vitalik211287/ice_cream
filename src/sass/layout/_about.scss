@@ -1,0 +1,124 @@
+.about {
+  background-image: url(../images/about/about-bg-left.png), url(../images/about/about-bg-right.png);
+  background-size: 50%;
+  background-position: 0% 93%, 100% 93%;
+  background-repeat: no-repeat;
+  background-color: #fff5f6;
+
+  padding-top: 125px;
+
+  @include retinabg {
+    background-image: url(../images/about/about-bg-left@2x.png),
+      url(../images/about/about-bg-right@2x.png);
+  }
+
+  @include tablet {
+    padding-top: 130px;
+
+    @media screen and (max-width: 1279px) {
+      background-image: none;
+    }
+  }
+
+  @include desktop {
+    background-position: 0% 123%, 100% 123%;
+
+    padding-top: 125px;
+  }
+  @media screen and (min-width: 1920px) {
+    background-size: contain;
+    background-position: 0% 0%, 100% 0%;
+  }
+}
+
+.about__wrapper {
+  margin-top: 26px;
+  @include tablet {
+    display: flex;
+    margin-top: 50px;
+  }
+  @include desktop {
+    margin-top: 55px;
+  }
+}
+
+.about__image {
+  display: block;
+  @include tablet {
+    width: calc((100% - 17px) / 2);
+  }
+  @include desktop {
+    width: 516px;
+    flex-shrink: 0;
+  }
+}
+
+.about__content--paragraf {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 46px;
+  z-index: 1;
+  @include tablet {
+    width: calc((100% - 17px) / 2);
+    margin-top: 0;
+    margin-left: 17px;
+    padding: 50px 0 0 0;
+  }
+  @include desktop {
+    width: 100%;
+    margin-left: 73px;
+  }
+}
+
+.about__text-start {
+  @include font(12px, 19px, 500);
+
+  margin-bottom: 31px;
+
+  @include tablet {
+    margin-bottom: 28px;
+    @include font(14px, 25px);
+  }
+  @include desktop {
+    margin-bottom: 30px;
+    @include font(16px, 28px, null, 0.04em);
+  }
+}
+
+.about__text-center {
+  @include font(12px, 19px, 500);
+  margin-bottom: 29px;
+  color: var(--secondaryTextColor);
+
+  @include tablet {
+    margin-bottom: 10px;
+    @include font(14px, 25px, null, 0.04em);
+  }
+  @include desktop {
+    margin-bottom: 27px;
+    @include font(14px, 27px);
+  }
+}
+
+.about__text-end {
+  @include font(12px, 19px, 500);
+  margin-bottom: 20px;
+  color: var(--secondaryTextColor);
+  @include tablet {
+    margin-bottom: 57px;
+    @include font(14px, 25px, null, 0.04em);
+  }
+  @include desktop {
+    margin-bottom: 38px;
+    @include font(14px, 27px);
+  }
+}
+
+.about__main-btn {
+  min-width: 176px;
+  @include font(14px, 18px, 700);
+
+  @include tablet {
+    @include font(16px, 21px);
+  }
+}

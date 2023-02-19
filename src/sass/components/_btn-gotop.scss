@@ -1,0 +1,89 @@
+.btn-gotop-wrap {
+  display: none;
+  @include tablet {
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+    z-index: 100;
+
+    display: block;
+  }
+}
+
+.btn-gotop {
+  @include tablet {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--primaryBrandColor);
+    background-color: var(--primaryBrandColor);
+    background-image: url('../images/icon-gotop.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 40%;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: opacity 0.3s linear, visibility 0.3s linear, transform 0.3s linear;
+  }
+
+  @include desktop {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.btn-gotop.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(110px);
+  pointer-events: none;
+}
+
+.btn-gotop:before,
+.btn-gotop:after {
+  content: '';
+  border: 1px solid var(--primaryBrandColor);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: auto;
+  width: auto;
+  border-radius: 50%;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  z-index: -1;
+}
+
+.btn-gotop:before {
+  animation-name: pulse_1;
+}
+.btn-gotop:after {
+  animation-name: pulse_2;
+}
+
+@keyframes pulse_1 {
+  from {
+    opacity: 1;
+    transform: scale(0.9, 0.9);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1.4, 1.4);
+  }
+}
+
+@keyframes pulse_2 {
+  from {
+    opacity: 1;
+    transform: scale(0.8, 0.8);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1.7, 1.7);
+  }
+}

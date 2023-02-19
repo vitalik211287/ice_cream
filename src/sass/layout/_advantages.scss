@@ -1,0 +1,129 @@
+.advantages {
+  padding-top: 39px;
+  padding-bottom: 97px;
+  background-color: var(--secondaryBgColor);
+
+  @include tablet {
+    padding-top: 66px;
+    padding-bottom: 140px;
+  }
+
+  @include desktop {
+    padding-top: 39px;
+  }
+}
+
+.advantages-list {
+  @include tablet {
+    @include flex;
+    flex-wrap: wrap;
+    margin: -30px;
+  }
+
+  @include desktop {
+    margin: -15px;
+  }
+}
+
+.advantages-list__item {
+  width: 230px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 38px;
+    }
+  }
+
+  @media screen and (min-width: 400px) and (max-width: 767px) {
+    &:nth-child(2) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &:nth-child(3) {
+      margin-left: auto;
+    }
+  }
+  @include tablet {
+    width: calc((100% - 40px) / 3 - 60px);
+    margin: 30px;
+  }
+  @include desktop {
+    width: calc(100% / 3 - 30px);
+    margin: 15px;
+  }
+}
+
+.advantages-list__text--accent {
+  display: block;
+  margin-bottom: 19px;
+
+  font-family: var(--secondaryFontFamily);
+  color: var(--primaryBrandColor);
+  @include font(36px, 41px, 400, 0.04em);
+  text-transform: uppercase;
+
+  @include tablet {
+    margin-bottom: 13px;
+    @include font(48px, 55px);
+  }
+
+  @include desktop {
+    margin-bottom: 15px;
+    @include font(58px, 66px);
+  }
+}
+
+.advantages-list__text {
+  color: var(--primaryTextDark);
+  @include font(12px, 20px, 700);
+
+  @include tablet {
+    @include font(14px, 24px);
+  }
+
+  @include desktop {
+    @include font(16px, 28px, 700, 0.02em);
+  }
+}
+
+.advantages-list__item::before {
+  content: '';
+  display: inline-block;
+  height: 50px;
+  margin-bottom: 16px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: pulse 1500ms linear infinite alternate;
+
+  @keyframes pulse {
+    0% {
+      transform: scale3d(1);
+    }
+    15% {
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+    100% {
+      transform: scale3d(1);
+    }
+  }
+
+  @include tablet {
+    margin-bottom: 36px;
+  }
+  @include desktop {
+    margin-bottom: 40px;
+  }
+}
+.advantages-list__item:nth-child(1)::before {
+  width: 33px;
+  background-image: url(../images/advantages/advantages1.svg);
+}
+
+.advantages-list__item:nth-child(2)::before {
+  width: 50px;
+  background-image: url(../images/advantages/advantages2.svg);
+}
+
+.advantages-list__item:nth-child(3)::before {
+  width: 44px;
+  background-image: url(../images/advantages/advantages3.svg);
+}

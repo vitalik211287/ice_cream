@@ -1,0 +1,21 @@
+:root {
+  //  Шрифты
+  --primaryFontFamily: 'DM Sans', sans-serif;
+  --secondaryFontFamily: 'Titan One', cursive;
+
+  // Цвет акцент
+  --primaryBrandColor: #d41443;
+  --secondaryBrandColor: #ffa5ba;
+
+  // Цвет текста
+  --primaryTextDark: #000000;
+  --primaryTextLight: #ffffff;
+  --secondaryTextColor: #907e82;
+
+  // Цвет фона
+  --primaryBgColor: #ffffff;
+  --secondaryBgColor: #fff5f6;
+
+  // timingFunction
+  --timingFunction: cubic-bezier(0.4, 0, 0.2, 1);
+}

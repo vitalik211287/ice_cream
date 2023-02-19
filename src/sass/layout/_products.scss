@@ -1,0 +1,238 @@
+.products {
+  padding-top: 121px;
+  padding-bottom: 98px;
+
+  @include tablet {
+    padding-top: 122px;
+    padding-bottom: 112px;
+  }
+  @include desktop {
+    padding-top: 127px;
+    padding-bottom: 119px;
+  }
+}
+.products-title {
+  margin-bottom: 31px;
+  @include tablet {
+    margin-bottom: 39px;
+  }
+  @include desktop {
+    margin-bottom: 49px;
+  }
+}
+.products-flex {
+  margin-bottom: -16px;
+  @include tablet {
+    @include flex;
+    align-items: flex-start;
+    margin: -10px;
+  }
+
+  @include desktop {
+    margin: -15px;
+  }
+}
+
+.products-card {
+  padding-top: 113px;
+
+  &:nth-child(2) .products-card__div {
+    background: #f0d1a5;
+
+    &::before {
+      background-image: url(../images/products/product2.png);
+      @include retinabg {
+        background-image: url(../images/products/product2@2x.png);
+      }
+    }
+  }
+
+  &:nth-child(3) .products-card__div {
+    background: #c2e297;
+
+    &::before {
+      background-image: url(../images/products/product3.png);
+      @include retinabg {
+        background-image: url(../images/products/product3@2x.png);
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    max-width: 335px;
+    margin: 0 auto 16px;
+  }
+
+  @include tablet {
+    width: calc(100% / 3 - 20px);
+    margin: 10px;
+    padding-top: 104px;
+  }
+
+  @include desktop {
+    width: calc(100% / 3 - 30px);
+    margin: 15px;
+    padding-top: 210px;
+  }
+}
+
+.products-card__div {
+  position: relative;
+
+  display: block;
+  padding: 161px 40px 40px;
+  border-radius: 24px;
+
+  text-align: center;
+  background: #ffb8ca;
+
+  transition: transform 250ms var(--timingFunction), box-shadow 250ms var(--timingFunction);
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+  @include tablet {
+    padding: 152px 11px 40px;
+  }
+  @include desktop {
+    padding: 163px 44px 50px;
+  }
+}
+
+.products-card__div::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -46%);
+
+  width: 249px;
+  height: 252px;
+
+  background-image: url(../images/products/product1.png);
+  @include retinabg {
+    background-image: url(../images/products/product1@2x.png);
+  }
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include tablet {
+    width: 220px;
+    height: 226px;
+
+    background-size: 100%;
+  }
+  @include desktop {
+    width: 335px;
+    height: 335px;
+    transform: translate(-50%, -63%);
+  }
+}
+
+.products-card__title {
+  position: relative;
+
+  font-family: var(--secondaryFontFamily);
+  @include font(20px, 23px, 400, 0.04em);
+  color: var(--primaryTextLight);
+  text-align: center;
+  text-transform: uppercase;
+
+  @include desktop {
+    @include font(30px, 34px);
+  }
+}
+
+.products-card__title::after {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  width: 6px;
+  height: 6px;
+  margin-top: 30px;
+  border-radius: 50%;
+
+  background-color: var(--primaryTextLight);
+  box-shadow: -10px 0 0 var(--primaryTextLight), 10px 0 0 var(--primaryTextLight);
+
+  @include desktop {
+    margin-top: 32px;
+  }
+}
+
+.products-card__content {
+  margin-top: 30px;
+
+  font-family: var(--primaryFontFamily);
+  @include font(14px, 21px, 700, 0.04em);
+  color: var(--primaryTextLight);
+  text-align: center;
+
+  @include tablet {
+    @include font(14px, 25px, 700, 0.04em);
+  }
+  @include desktop {
+    @include font(16px, 28px, 700, 0.04em);
+    margin-top: 32px;
+  }
+}
+
+.prod-icecream,
+.prod-icecoffee,
+.prod-milkshakes {
+  display: none;
+}
+
+#read-icecream:checked,
+#read-icecoffee:checked,
+#read-milkshakes:checked {
+  & ~ .prod-icecream,
+  & ~ .prod-icecoffee,
+  & ~ .prod-milkshakes {
+    display: block;
+    margin-top: 30px;
+  }
+}
+
+.products_read-more {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+  transition: fill 250ms var(--timingFunction), transform 250ms var(--timingFunction);
+}
+
+.read-icecream,
+.read-icecoffee,
+.read-milkshakes {
+  margin: 0 auto;
+  margin-top: 30px;
+
+  &:hover,
+  &:focus {
+    background-color: var(--primaryBrandColor);
+    transform: scale(1.1) rotate(90deg);
+  }
+
+  @include tablet {
+    margin-top: 40px;
+  }
+
+  @include desktop {
+    margin-top: 62px;
+  }
+}
+
+#read-icecream:checked,
+#read-icecoffee:checked,
+#read-milkshakes:checked {
+  & ~ .read-icecream,
+  & ~ .read-icecoffee,
+  & ~ .read-milkshakes {
+    &:hover,
+    &:focus {
+      background-color: var(--primaryBrandColor);
+      transform: scale(1.1) rotate(-90deg);
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.section-title {
+  font-family: var(--secondaryFontFamily);
+  color: var(--primaryBrandColor);
+  @include font(34px, 39px, 400, 0.04em);
+  text-align: center;
+  text-transform: uppercase;
+
+  @include tablet {
+    @include font(48px, 55px);
+  }
+
+  @include desktop {
+    @include font(58px, 66px, null, 0.06em);
+  }
+}
+
+.pre-title {
+  margin-bottom: 15px;
+
+  font-family: var(--secondaryFontFamily);
+  color: var(--secondaryBrandColor);
+  @include font(18px, 21px, 400);
+  text-align: center;
+  text-transform: uppercase;
+
+  @include tablet {
+    @include font(26px, 30px);
+  }
+
+  @include desktop {
+    @include font(30px, 34px, null, 0.04em);
+  }
+}

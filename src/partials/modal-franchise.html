@@ -1,0 +1,46 @@
+<div class="backdrop" id="modal-franchise">
+  <div class="modal modal-franchise">
+    <a href="" class="logo modal-franchise__logo"
+      ><img
+        class="logo__img"
+        srcset="./images/logo.png 1x, ./images/logo@2x.png 2x"
+        src="./images/logo.png"
+        alt="Company's Logo"
+    /></a>
+    <h2 class="modal-franchise__title">
+      <span class="modal-franchise__span">Franchising </span>conditions
+    </h2>
+    <p class="modal-franchise__text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laudantium quos ratione est sit
+      ad tenetur, fugiat, ab tempora doloremque non laborum commodi! Molestiae cum architecto neque,
+      possimus officia corporis.
+    </p>
+
+    <p class="modal-franchise__text">
+      If you want to receive a purpouse of franchise conditions, we will send it to your e-mail.
+    </p>
+    <form class="form modal-franchise__form">
+      <div class="form__form-field">
+        <label for="email" class="form__label"> Please, enter your e-mail </label>
+        <input type="email" id="email" class="form__input" placeholder="example@mail.com" />
+        <svg class="form__icon" width="18" height="18">
+          <use href="./images/sprite.svg#icon-email"></use>
+        </svg>
+      </div>
+
+      <div class="form__form-field">
+        <input type="checkbox" name="policy" id="policy" class="checkbox visually-hidden" />
+        <label for="policy" class="form__label-policy"
+          ><span>I agree with a <a href="#" class="form__text-polisy">privacy policy</a></span>
+        </label>
+      </div>
+      <button class="main-btn main-btn--dark form__button" type="submit">Send</button>
+    </form>
+
+    <button class="modal__close-btn js-modal-close" type="button">
+      <svg class="modal__close-icon" width="30" height="30">
+        <use href="./images/sprite.svg#close-btn"></use>
+      </svg>
+    </button>
+  </div>
+</div>

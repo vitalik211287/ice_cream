@@ -1,0 +1,503 @@
+.hero-section {
+  background-color: #ffb8ca;
+  height: 502px;
+  overflow: hidden;
+
+  @include tablet {
+    height: 399px;
+  }
+
+  @include desktop {
+    height: 665px;
+  }
+}
+
+.hero-container {
+  display: flex;
+  padding-top: 83px;
+  position: relative;
+  height: 100%;
+  align-items: flex-end;
+
+  @include tablet {
+    padding-top: 94px;
+    align-items: unset;
+  }
+
+  @include desktop {
+    padding-top: 156px;
+  }
+}
+
+.hero__left {
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.hero__upper-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+  padding-bottom: 160px;
+
+  @include tablet {
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
+
+  @include desktop {
+    width: 277px;
+  }
+}
+
+.hero__title {
+  @include font(26px, 30px, 400, 0.04em);
+  color: var(--primaryTextLight);
+  font-family: 'Titan One', cursive;
+  text-transform: uppercase;
+  width: 218px;
+
+  @include tablet {
+    @include font(22px, 25px);
+    width: 162px;
+  }
+
+  @include desktop {
+    @include font(38px, 44px);
+    width: 277px;
+  }
+}
+
+.header__passion {
+  @include font(44px, 46px, 400, 0.04em);
+  color: #d41443;
+
+  @include tablet {
+    @include font(33px, 35px);
+  }
+
+  @include desktop {
+    @include font(53px, 55px);
+  }
+}
+
+.hero__ancors {
+  display: flex;
+  margin-top: 19px;
+
+  @include tablet {
+    margin-top: 17px;
+  }
+
+  @include desktop {
+    margin-top: 19px;
+  }
+}
+
+.hero-ancors__part {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+  @include desktop {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+}
+
+.hero-ancor {
+  @include flex(flex, center, center);
+  text-align: center;
+  padding: 0 20px;
+  font-size: 8px;
+  line-height: 1.25;
+  border-radius: 20px;
+  text-decoration: none;
+
+  transition: background-color 250ms var(--timingFunction);
+
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+}
+
+.product__ancor {
+  min-width: 62.4px;
+  height: 24px;
+  color: var(--primaryTextLight);
+  background-color: var(--primaryBrandColor);
+
+  &:hover,
+  &:focus {
+    background-color: #ba1f44;
+  }
+
+  @include desktop {
+    min-width: 104px;
+    height: 40px;
+  }
+}
+
+.him__ancor {
+  min-width: 82.8px;
+  height: 24px;
+  background-color: #ffffff;
+  color: var(--primaryBrandColor);
+
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
+
+  @include desktop {
+    min-width: 138px;
+    height: 40px;
+  }
+}
+
+.hero-text__container {
+  display: none;
+
+  @include tablet {
+    margin-top: auto;
+    padding-left: 120px;
+    padding-bottom: 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  @include desktop {
+    padding-left: 180px;
+    padding-bottom: 56px;
+  }
+}
+
+.hero-text {
+  display: none;
+
+  @include tablet {
+    display: block;
+    width: 114px;
+    font-size: 8px;
+    line-height: 1.5;
+    color: var(--primaryTextLight);
+  }
+
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.4;
+    width: 200px;
+  }
+}
+
+.hero__btn-arrow:hover,
+.hero__btn-arrow:focus {
+  transform: scale(1.1) rotate(-90deg);
+}
+
+.hero__about {
+  display: none;
+}
+
+#read-hero:checked {
+  & ~ .hero__about {
+    display: block;
+  }
+
+  & ~ .hero__btn-arrow:hover,
+  & ~ .hero__btn-arrow:focus {
+    transform: scale(1.1) rotate(90deg);
+  }
+}
+
+.hero__btn-arrow {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    width: 18px;
+    height: 18px;
+    margin-top: 20px;
+  }
+
+  @include desktop {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.hero__btn-arrow .btn-arrow__icon {
+  width: 8px;
+  height: 8px;
+
+  @include desktop {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.cafes-list {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: auto;
+    padding-top: 3px;
+    padding-right: 7px;
+  }
+
+  @include desktop {
+    padding-right: 0;
+  }
+}
+
+.cafes-list__text {
+  font-size: 8px;
+  line-height: 1.25;
+  text-align: end;
+  color: var(--primaryTextLight);
+
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.3;
+    margin-top: 2px;
+  }
+}
+
+.cafe__part {
+  width: 43px;
+  height: 44px;
+
+  @include desktop {
+    width: 72px;
+    height: 77px;
+  }
+}
+
+.food-truck__part {
+  width: 51px;
+  height: 43px;
+  margin-top: 13px;
+
+  @include desktop {
+    width: 92px;
+    height: 76px;
+    margin-top: 15px;
+  }
+}
+
+.cafes-list__number {
+  position: relative;
+  z-index: 2;
+
+  @include font(28px, 32px, null, 0.04em);
+  font-family: var(--secondaryFontFamily);
+  color: #d41443;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 26px;
+    bottom: 18px;
+    z-index: -1;
+
+    width: 16px;
+    height: 16px;
+
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
+
+  @include desktop {
+    @include font(46px, 53px);
+
+    &::before {
+      left: 42px;
+      bottom: 27px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+.icecream__container {
+  position: absolute;
+  width: 346px;
+  height: 419px;
+  left: 36px;
+
+  top: 83px;
+
+  @media screen and (min-width: 414px) and (max-width: 767px) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @include tablet {
+    top: 31px;
+    left: 293px;
+
+    width: 324px;
+    height: 368px;
+  }
+
+  @include desktop {
+    top: 52px;
+    left: 380px;
+
+    width: 538px;
+    height: 613px;
+  }
+}
+
+.hero__circle {
+  width: 346px;
+  height: 344px;
+
+  border-radius: 50%;
+  background-color: #ffa5ba;
+
+  animation-name: circle;
+  animation-timing-function: linear;
+  animation-duration: 800ms;
+  animation-delay: 200ms;
+  animation-fill-mode: backwards;
+
+  @include tablet {
+    width: 324px;
+    height: 322px;
+  }
+  @include desktop {
+    width: 538px;
+    height: 538px;
+  }
+}
+
+.hero__icecream-pickture {
+  position: absolute;
+  top: 9px;
+  left: 81px;
+  z-index: 1;
+  height: 410px;
+  width: 171px;
+
+  animation-name: icecream;
+  animation-timing-function: linear;
+  animation-duration: 800ms;
+  animation-delay: 600ms;
+  animation-fill-mode: backwards;
+
+  @include tablet {
+    top: 32px;
+    left: 71px;
+    width: 143px;
+    height: 336px;
+  }
+  @include desktop {
+    top: 56px;
+    left: 119px;
+    width: 236px;
+    height: 557px;
+  }
+}
+
+.hero__girl-pickture {
+  display: none;
+  @include tablet {
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+
+    display: block;
+    width: 168px;
+    height: 133px;
+  }
+  @include desktop {
+    width: 293px;
+    height: 232px;
+  }
+
+  &:hover {
+    animation-name: girl;
+    animation-timing-function: linear;
+    animation-duration: 120ms;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+  }
+}
+
+.hero__milk-pickture {
+  display: none;
+  @include tablet {
+    position: absolute;
+    bottom: 28px;
+    left: 20px;
+
+    display: block;
+    width: 124px;
+    height: 126px;
+
+    transform-origin: center bottom;
+    animation-name: milk;
+    animation-timing-function: linear;
+    animation-duration: 600ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  @include desktop {
+    left: -18px;
+    bottom: 45px;
+
+    width: 188px;
+    height: 191px;
+  }
+}
+
+@keyframes circle {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes icecream {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes milk {
+  0% {
+    transform: rotateZ(10deg);
+  }
+
+  100% {
+    transform: rotateZ(-10deg);
+  }
+}
+
+@keyframes girl {
+  0% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(10px);
+  }
+}
