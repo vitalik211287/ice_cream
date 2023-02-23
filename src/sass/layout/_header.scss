@@ -39,7 +39,7 @@ a {
 
 .header-navbar-container {
   padding: 6px 0 0 0;
-
+z-index: 10;
   @media screen and (min-width: 768px) {
     padding: 37px 0 0 0;
     display: flex;
@@ -52,7 +52,7 @@ a {
   .header-navbar,
   .header-navbar__boxes {
     display: flex;
-    z-index: 10;
+    z-index: 2;
   }
   .header-navbar__item:not(:last-child) {
     margin-right: 35px;
@@ -61,8 +61,7 @@ a {
   .header-navbar__boxes {
     padding: 0 110px;
     margin: auto;
-    z-index: 10;
-  }
+    }
 }
 
 .header-menu__item {
