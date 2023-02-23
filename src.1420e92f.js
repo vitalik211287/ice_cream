@@ -19,4 +19,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./animate.css"),require("./js/poduct-modal"),require("./js/hero-modal"),require("./js/menu"),require("./js/header-modal"),require("./js/modal"),require("./js/slider"),require("./js/mobile-menu"),require("./js/contacts"),require("./js/wow.min");
 },{"./sass/main.scss":"clu1","./animate.css":"SKGR","./js/poduct-modal":"h23I","./js/hero-modal":"Y4fj","./js/menu":"i0CD","./js/header-modal":"jTTk","./js/modal":"RSqK","./js/slider":"SKGR","./js/mobile-menu":"sByI","./js/contacts":"Vz8i","./js/wow.min":"SKGR"}]},{},["Focm"], null)
-//# sourceMappingURL=/ice_cream/src.fb10a1b1.js.map
+//# sourceMappingURL=/ice_cream/src.1420e92f.js.map
